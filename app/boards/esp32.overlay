@@ -2,3 +2,24 @@
  * Copyright (c) 2021 Nordic Semiconductor ASA
  * SPDX-License-Identifier: Apache-2.0
  */
+
+/{
+    aliases{
+         led0 = &myled0;
+         led1 = &myled1;
+         led2 = &myled2;
+    };
+
+	leds{
+		compatible = "gpio-leds";
+		myled0: led_0 {
+			gpios = <&gpio0 25 GPIO_ACTIVE_LOW>;
+		};
+		myled1: led_1 {
+			gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
+		};
+		myled2: led_2 {
+			gpios = <&gpio0 27 GPIO_ACTIVE_LOW>;
+		};
+	};
+};

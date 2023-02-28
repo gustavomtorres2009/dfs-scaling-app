@@ -15,6 +15,7 @@
 #define STACKSIZE 1024
 
 /* scheduling priority used by each thread */
+#define PRIORITY 7
 #define PRIORITY_A 7
 #define PRIORITY_B 5
 #define PRIORITY_C 3
@@ -111,7 +112,7 @@ void blink1(void)
 
 void blink2(void)
 {
-	blink(&led2, 2000, 1);
+	blink(&led2, 2000, 2);
 }
 
 void uart_out(void)
